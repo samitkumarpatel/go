@@ -5,8 +5,10 @@ import "fmt"
 const name string = "SAMIT"
 
 func main() {
-	const i int = 10
+	const LENGTH int = 10
+	const WIDTH int = 5
+	var area int
 
-	fmt.Println(i)
-	fmt.Println(name)
+	area = LENGTH * WIDTH
+	fmt.Printf("value of area : %d", area)
 }
