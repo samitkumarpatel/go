@@ -64,4 +64,25 @@ The more details can be found in [tutorialspoint](https://www.tutorialspoint.com
 
 ## 02-constants
 
+- Immutable , but can be changed
+- Replaced by the compiler at compile time
+    - value must be calculated at compile time
+- Named like variable
+    - PascalCase for exported constant
+    - camelCase for internal constant
+- Typed constants work like immutable variables
+    - Can interoperate only with same type
+- UnTyped Constants work like immutable variables
+    - can interoperate only with similar type
+- Enumerated contsnat
+    - special symbol iota allows related constants to be created easily
+    - iota starts at 0 in each const block and increaments by one
+    - Watch out of constant values that matches zero value for variable
+- Enumerated expressions
+    - Operations that can be determined at compile time are allowed
+        - arithmetic
+        - bitwise operations
+        - bitshifting
+
+
 ## 03-Array-n-Slices
