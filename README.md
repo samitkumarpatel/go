@@ -110,6 +110,106 @@ The more details can be found in [tutorialspoint](https://www.tutorialspoint.com
         - append function to add elements to slice
         - copies refers to same underlying array 
 
+
+## 04-maps-n-structs
+Both are collection types.
+
+Topic to cover are :
+
+- maps
+
+```go
+package main
+
+import ("fmt")
+
+func main() {
+    statePopulation : map[string]int {
+        "Odisha": 100000,
+        "Maharastra" : 600000,
+        "UttarPradesh" : 1000000
+    }
+    fmt.Println(statePopulation)
+    fmt.Println(statePopulation["Maharastra"])
+    
+    //add
+    statePopulation["Kerla"] = 800000
+    fmt.Println(statePopulation["Kerla"])
+    
+    //delete a key from map
+    delete(statePopulation,"Odisha")
+    
+    fmt.Println(statePopulation["Chatisgarh"]) // 0
+    pop, ok := statePopulation["Chatisgarh"]
+    fmt.Println(pop,ok) //0 false
+
+    _, ok := statePopulation["Chatisgarh"]
+    fmt.Println(ok) //0 false
+
+    // len(mapVariableName) will give you the map lenght
+
+    statePopulation := make(map[string]int,10) // define length of the map , but does not work well- TODO - explore more!
+    
+    // slice to a key of Map
+    m := map[[3]int]string{} 
+
+    //map copy. 
+    //manipulation of one object , might have impact to the reference map
+    sp := statePopulation
+    delete(sp,"Odisha")
+    fmt.Println(sp) // same result as statePopulation
+    fmt.Println(statePopulation) // // same result as sp
+
+
+}
+
+```
+- Structs
+   
+```go
+package main
+
+import ("fmt")
+
+type Doctor struct {
+    number int
+    actorName string
+    companions []string
+}
+
+func main() {
+    aDoctor := Doctor {
+        number : 3,
+        actorName: "John",
+        companions: []string{
+            "A Paul",
+            "Jo Grant"
+        }
+    }
+    //also can be done like this , but not recomanded
+    anotherDoctor := Doctor {
+        4,
+        "JDeb",
+        []string{
+            "A Mith",
+            "J Vri"
+        }
+    }
+
+    fmt.Println(aDoctor)
+    fmt.Println(anotherDoctor)
+    fmt.Println(aDoctor.actorName)
+    fmt.Println(aDoctor.companions[1])
+
+    //anonymous structs
+    aMan := struct{name string}{name: "John Doe"}
+    fmt.Println(aMan)
+
+}
+
+```
+
+
 ## Template
 ```go
 package main
