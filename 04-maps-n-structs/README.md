@@ -14,12 +14,20 @@ package main
 import ("fmt")
 
 func main() {
-    statePopulation : map[string]int {
+    statePopulation := map[string]int {
         "Odisha": 100000,
         "Maharastra" : 600000,
         "UttarPradesh" : 1000000
     }
+
+    //statePopulation := map[string]int{}
+    
+    var fruits map[string]string
+    fruits = make(map[string]string)
+    fruits["Mango"] = "Sweet"
+
     fmt.Println(statePopulation)
+    fmt.Println(fruits)
     fmt.Println(statePopulation["Maharastra"])
     
     //add

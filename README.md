@@ -130,20 +130,18 @@ Both are collection types.
     - Tags can be added to struct fields to describe 
 
 
-## Control Flow
-- if and switch statement
+## 05-control-flow
 
+- if statement
 
-```go
-package main
+- switch statement
+    - simple cases
+    - cases with multiple tests
+    - Falling through
+    - Type switches
 
-import ("fmt")
+## 06-looping
 
-func main() {
-    
-}
-
-```
 
 ## Template
 ```go
