@@ -13,7 +13,9 @@ func main() {
 	}
 
 	//example-2
-	x := map[string]int{}
+	x := map[string]int{
+		"b": 20
+	}
 	x["a"] = 10
 
 	//example-3
